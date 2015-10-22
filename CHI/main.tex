@@ -1,0 +1,122 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\pagenumbering{arabic}
+\renewcommand{\thesection}{\hspace*{-1.0em}}
+ \newcommand{\notocsection}[1]{% 
+ 	\refstepcounter{section}% 
+ 	\section*{\thesection \quad #1}}% 
+
+%Header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%
+
+
+\makeatletter
+\def\@makechapterhead#1{%
+	\vspace*{50\p@}%
+	{\parindent \z@ \raggedright \normalfont
+		\interlinepenalty\@M
+		\Huge\bfseries  \thechapter.\quad #1\par\nobreak
+		\vskip 40\p@
+	}}
+	\makeatother
+
+\title{
+	{CHI Lab Record}\\
+	{\large Department of Computer Science and Engineering}\\
+	{ College of Engineering Trivandrum}
+}
+\author{Prathyush P.V}
+
+\begin{document}
+  \maketitle
+  \begin{titlepage}
+  	\begin{center}
+	  	\huge{ COLLEGE OF ENGINEERING TRIVANDRUM}\\
+		\includegraphics{Cet_emblem}\\
+		\textsc{\Large{\textbf{ CHI LABORATORY RECORD}}}
+		\line(1,0){300}
+  	\end{center}
+  	\textsc{	
+	  	\\University Reg. No. : 12400040\\
+		Name: Prathyush P.V\\
+	  	Roll No: 43\\
+	  	Class : S7 R\\
+	  	From page no. 1 to page no 50\\\\
+		\textbf{CERTIFIED BONAFIDE RECORD OF WORK DONE BY}\\
+		\centerline{\textbf{PRATHYUSH P.V}}
+		\\\\\\\\
+	  }
+	 
+	\begin{minipage}[t]{8cm}
+		\flushleft
+		Thiruvananthapuram
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{7cm}
+		\flushright
+		Staff Member-in-charge
+	\end{minipage}
+
+  	
+  \end{titlepage}
+  \tableofcontents
+  \chapter{Introduction}
+  \input{chapters/introduction}
+  
+  \chapter{Exp 1 Title}
+  \input{chapters/exp01}
+  
+  \chapter{Exp 2 Title}
+  \input{chapters/exp02}
+  
+  \chapter{Exp 3 Title}
+  \input{chapters/exp03}
+    
+  \chapter{Exp 4 Title}
+  \input{chapters/exp04}
+      
+  \chapter{Exp 5 Title}
+  \input{chapters/exp05}
+  
+  \chapter{Exp 6 Title}
+  \input{chapters/exp06}
+  
+  \chapter{Exp 7 Title}
+  \input{chapters/exp07}
+  
+  \chapter{Exp 8 Title}
+  \input{chapters/exp08}
+  
+  \chapter{Exp 9 Title}
+  \input{chapters/exp09}
+  
+  \chapter{Exp 10 Title}
+  \input{chapters/exp10}
+  
+  \chapter{Exp 11 Title}
+  \input{chapters/exp11}
+  
+  \chapter{Exp 12 Title}
+  \input{chapters/exp12}
+  
+  \chapter{Exp 13 Title}
+  \input{chapters/exp13}
+  
+  \chapter{Exp 14 Title}
+  \input{chapters/exp14}
+  
+  \chapter{Exp 15 Title}
+  \input{chapters/exp15}
+  
+  \chapter{Exp 16 Title}
+  \input{chapters/exp16}
+  
+  \chapter{Exp 17 Title}
+  \input{chapters/exp17}
+ 
+  
+\end{document}
