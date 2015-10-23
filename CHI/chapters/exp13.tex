@@ -1,17 +1,49 @@
+\documentclass{article}
+\begin{document}
 \section{Problem Definition}
-adsflkjfdlksjfdasdkhl jkdfs lkjf dslkjf laksdjflaskdjf lkasdj flkasjd f
+To generate a Fibonacci series with the limit read as the input\\
 \section{Algorithm}
-dfskljfklasdjfkla\\
-fdasfasdafdsdfsfdas\\
-fsdafadsdfsafdas\\
-asdfdfasdfsdfsafds\\
-fdasfdsafdsafadsfdsafds\\
-dfsafafdsfds\\
+1.Start\\
+2.Point DPTR to memory location 4500\\
+3.Move the count to register \\
+4.Move 00 to A\\
+5.Move A to memory location 4500\\
+6.Move A to R1\\
+7.Decrement count\\
+8.Increment DPTR\\
+9.Move 01 to A register, then to R2 register\\
+10.Decrement count\\
+11.Move R1 to A\\
+12.Add A with R2\\
+13.Move A to R3\\
+14.Move content of DPTR to A, then move R2\\
+15.Decrement DPTR\\
+16.Move R3 to A, then move to the desired memory location\\
+17.Decrement R0\\
+18.If R0 is not zero,loop\\
+19.Stop\\
 \section{Program}
-fdsajkdsfkjdsflk\\
-dfsfdsadfsadfsdfsa\\
-dfslkjdfsalkjdfsjkl\\
-wrerqewrweerwqerwqrewq\\
-dfskjsdfkljdfskjl\\
+MOV DPTR,\#4200H\\
+MOVX A,@DPTR\\
+MOV R7,A\\
+MOV A,\#00\\
+MOV R1,\#01\\
+MOV DPTR,\#4300H\\
+LOOP1 :MOV @DPTR,A\\
+INC DPTR\\
+ADD A,R1\\
+MOV R2,A\\
+MOV A,R1\\
+MOV R3,A\\
+MOV A,R2\\
+MOV R1,A\\
+MOV A,R3\\
+DJNZ R7,LOOP1\\
+HLT :SJMP HLT\\
+\section{Sample Inputs}
+(4200): 07\\
+\section{Sample Outputs}
+(4300): 00 01 01 02 03 05 08\\
 \section{Result}
 Program executed successfully and the output is verified.
+\end{document}
