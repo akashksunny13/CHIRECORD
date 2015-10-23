@@ -1,17 +1,27 @@
+\documentclass{article}
+\begin{document}
 \section{Problem Definition}
-adsflkjfdlksjfdasdkhl jkdfs lkjf dslkjf laksdjflaskdjf lkasdj flkasjd f
+To find the factorial of an input number.
 \section{Algorithm}
-dfskljfklasdjfkla\\
-fdasfasdafdsdfsfdas\\
-fsdafadsdfsafdas\\
-asdfdfasdfsdfsafds\\
-fdasfdsafdsafadsfdsafds\\
-dfsafafdsfds\\
+1 move the number to register R0\\
+2 move 1 to register A\\
+3 multiply R0 with A\\
+4 decrement R0\\
+5 if R0 greater than 0 goto 3\\
+6 end\\
 \section{Program}
-fdsajkdsfkjdsflk\\
-dfsfdsadfsadfsdfsa\\
-dfslkjdfsalkjdfsjkl\\
-wrerqewrweerwqerwqrewq\\
-dfskjsdfkljdfskjl\\
+MOV DPTR,\#4200H\\
+MOVX A,@DPTR\\
+MOV B,A\\
+MOV A,\#01\\
+LOOP1 :MOV R1,B\\
+MOV R2,A\\
+MUL AB\\
+MOV B,R1\\
+DJNZ B,LOOP1\\
+MOV DPTR,\#4300H\\
+MOVX @DPTR,A\\
+HLT :SJMP HLT\\
 \section{Result}
 Program executed successfully and the output is verified.
+\end{document}
