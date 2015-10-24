@@ -1,17 +1,70 @@
-\section{Problem Definition}
-adsflkjfdlksjfdasdkhl jkdfs lkjf dslkjf laksdjflaskdjf lkasdj flkasjd f
-\section{Algorithm}
-dfskljfklasdjfkla\\
-fdasfasdafdsdfsfdas\\
-fsdafadsdfsafdas\\
-asdfdfasdfsdfsafds\\
-fdasfdsafdsafadsfdsafds\\
-dfsafafdsfds\\
-\section{Program}
-fdsajkdsfkjdsflk\\
-dfsfdsadfsadfsdfsa\\
-dfslkjdfsalkjdfsjkl\\
-wrerqewrweerwqerwqrewq\\
-dfskjsdfkljdfskjl\\
-\section{Result}
-Program executed successfully and the output is verified.
+\chapter{Parallel Port Inter-Computer Communication}
+%
+%
+%
+%
+\section*{AIM:}
+To realize inter-computer communication through the parallel port
+\section*{THEORY:}
+For inter computer communication, the bidirectional mode of the parallel port should be enabled. This is controlled by bit number 6 of the control port associated with the parallel port. When it is cleared to 0, data values can be output to the data pins. When it is set to 1, external data values can be read from the data pins.
+\section*{PROCEDURE:}
+\textbf{\underline{STEP 1}:} Connect parallel ports of two computers
+
+\textbf{\underline{STEP 2}:} Enter programs for sender and receiver into the corresponding computers
+
+\textbf{\underline{STEP 3}:} Compile and run the program in sender
+
+\textbf{\underline{STEP 4}:} Compile and run the program in receiver
+
+\textbf{\underline{STEP 5}:} Observe data. as entered at sender side, at receiver side
+
+\section*{PROGRAM:}
+\textbf{SENDER:}
+\begin{lstlisting}
+#include <stdio.h>
+#include <unistd.h>
+
+int main(){
+     int addr;
+     addr = 0x378;
+     ioperm(addr, 3, 1);
+     
+     //--configure as sender
+     outb(0x0B, addr+2);
+     
+     //--send data 0xFF
+     outb(0xFF, addr);
+     
+     ioperm(addr, 3, 0);
+     return 0;
+}
+\end{lstlisting}
+
+\vspace{20pt}
+\textbf{RECEIVER:}
+\begin{lstlisting}
+#include <stdio.h>
+#include <unistd.h>
+
+int main(){
+     int addr;
+     addr = 0x378;
+     ioperm(addr ,3 ,1);
+     
+     //--configure as receiver
+     outb(0x2B, addr+2);
+     
+     //--receive data
+     printf("\nReceived %x\n", inb(addr) );
+     
+     ioperm(addr, 3, 0);
+     return 0;
+}
+\end{lstlisting}
+
+\section*{RESULT:}
+The program has been executed and the output verified
+%
+%
+%
+%
