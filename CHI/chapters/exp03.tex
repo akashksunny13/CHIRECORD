@@ -1,17 +1,90 @@
-\section{Problem Definition}
-adsflkjfdlksjfdasdkhl jkdfs lkjf dslkjf laksdjflaskdjf lkasdj flkasjd f
-\section{Algorithm}
-dfskljfklasdjfkla\\
-fdasfasdafdsdfsfdas\\
-fsdafadsdfsafdas\\
-asdfdfasdfsdfsafds\\
-fdasfdsafdsafadsfdsafds\\
-dfsafafdsfds\\
-\section{Program}
-fdsajkdsfkjdsflk\\
-dfsfdsadfsadfsdfsa\\
-dfslkjdfsalkjdfsjkl\\
-wrerqewrweerwqerwqrewq\\
-dfskjsdfkljdfskjl\\
-\section{Result}
-Program executed successfully and the output is verified.
+\chapter{COM Port base address}
+%
+%
+\section*{AIM:}
+To find the base address of the COM port in a system.
+\section*{THEORY:}
+COM is the original, yet still common, name of the serial port interface on IBM-PC compatible computers. It might refer not only to physical ports, but also to virtual ports, such as ports created by Bluetooth or USB-to-serial adapters. COM ports are usually associated with 4 memory addresses as shown below:
+
+\begin{center}
+\bgroup
+\def\arraystretch{1.5}
+\begin{tabular}{ |c|c|c| }
+\hline
+\textbf{NAME} & \textbf{ADDRESS} & \textbf{IRQ}\\
+\hline
+COM1 & 0x3f8 & 4\\
+\hline
+COM2 & 0x2f8 & 3\\
+\hline
+COM3 & 0x3e8 & 4\\
+\hline
+COM4 & 0x2e8 & 3\\
+\hline
+\end{tabular}
+\egroup
+\end{center}
+
+The base addresses for the COM ports can be read from the BIOS data area. The addresses in the BIOS data
+area that store the COM port base addresses are as follows:
+
+\begin{center}
+\bgroup
+\def\arraystretch{1.5}
+\begin{tabular}{ |c|c| }
+\hline
+\textbf{Start Address} & \textbf{Function}\\
+\hline
+0000:0400 & COM1's Base Address\\
+\hline
+0000:0402 & COM2's Base Adress\\
+\hline
+0000:0403 & COM3's Base Address\\
+\hline
+0000:0404 & COM4's Base Address\\
+\hline
+\end{tabular}
+\egroup
+\end{center}
+
+\section*{PROCEDURE:}
+Execute the following program to find the base address of the COM port.
+
+\section*{PROGRAM:}
+\begin{lstlisting}
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+     char s[100],string[100];
+     int com=0;
+     
+     //--Executing BASH script to read all messages in kernel ring buffer,
+     //  search for the string "ttyS" in these messages and
+     //  redirect the search results into a text file for further use
+     
+     system("dmesg | grep ttyS > out.txt");
+     
+     FILE *fp;
+     fp=fopen("out.txt","r");
+     
+     while( !feof(fp) )
+     {
+          fscanf(fp, "%s", string);
+          if( strcmp(string,"I/O") == 0 )
+          {
+               fscanf(fp, "%s", s);
+               printf("COM PORT%d ADDRESS IS %s\n",com,s);
+          }
+     }
+     
+     fclose(fp);
+     return 0;
+}
+\end{lstlisting}
+
+\section*{RESULT}
+The program has been executed and the output, verified.
+%
+%
