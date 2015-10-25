@@ -1,17 +1,120 @@
-\section{Problem Definition}
-adsflkjfdlksjfdasdkhl jkdfs lkjf dslkjf laksdjflaskdjf lkasdj flkasjd f
-\section{Algorithm}
-dfskljfklasdjfkla\\
-fdasfasdafdsdfsfdas\\
-fsdafadsdfsafdas\\
-asdfdfasdfsdfsafds\\
-fdasfdsafdsafadsfdsafds\\
-dfsafafdsfds\\
-\section{Program}
-fdsajkdsfkjdsflk\\
-dfsfdsadfsadfsdfsa\\
-dfslkjdfsalkjdfsjkl\\
-wrerqewrweerwqerwqrewq\\
-dfskjsdfkljdfskjl\\
-\section{Result}
-Program executed successfully and the output is verified.
+\chapter{ Data communication through the serial port }
+%
+%
+%
+%
+\section*{AIM:}
+To transfer \\
+ 1) Single data between 8051 microcontroller ICs.\\
+ 2) an array of numbers  between 8051 microcontroller ICs.
+
+\section*{ALGORITHM:}
+\textbf{Single data transfer}\\
+\large{Sender:}\\
+
+\textbf{\underline{STEP 1}:}SBUF <- Element to be transfered
+
+\large{Receiver:}\\
+\textbf{\underline{STEP 1}:} Clear R1 bit 
+
+\textbf{\underline{STEP 2}:} When R1 is set, move SBUF into an external memory location
+
+
+
+\section*{PROGRAM:}
+\textbf{Sender:}
+\begin{lstlisting}
+MOV SBUF ,#FF
+LOOP: SJMP LOOP
+\end{lstlisting}
+
+\vspace{20pt}
+
+\textbf{Receiver:}
+\begin{lstlisting}
+MOV DPTR,#4500
+CLR R1 
+DATA_NOT_READY: JNB R1,DATA_NOT_READY
+MOV A,SBUF
+MOVX @DPTR,A
+\end{lstlisting}
+
+
+
+
+\section*{Sample Output}
+At the receiver side\\
+(4200): FF
+
+\vspace{30pt}
+
+\section*{ALGORITHM:}
+\textbf{Array transfer}\\
+\large{Sender:}\\
+
+\textbf{\underline{STEP 1}:} R1 <- count
+
+\textbf{\underline{STEP 2}:} Clear RI
+
+\textbf{\underline{STEP 3}:} A <- Element to be transfered
+
+\textbf{\underline{STEP 4}:} SBUF <- A
+
+\textbf{\underline{STEP 5}:} If RI bit is set, decrement R1 and goto step 2
+
+\large{Receiver:}\\
+
+\textbf{\underline{STEP 1}:} Clear RI bit
+
+\textbf{\underline{STEP 2}:} If RI bit is set, A <- SBUF
+
+\textbf{\underline{STEP 3}:} Store A in a memory location
+
+\textbf{\underline{STEP 4}:} SBUF <- 01
+
+\textbf{\underline{STEP 5}:} Goto step 1
+
+
+\section*{PROGRAM:}
+\textbf{Sender:}
+\begin{lstlisting}
+MOV DPTR,#4200
+MOV R1,0A
+SEND_LOOP: CLR 98 
+MOV A,@DPTR
+MOV SBUF,A
+INC DPTR
+LOOP: JNB 98,LOOP
+DJNZ R1,SEND_LOOP
+END_LOOP: SJMP END_LOOP
+\end{lstlisting}
+
+\vspace{20pt}
+
+\textbf{Receiver:}
+\begin{lstlisting}
+MOV DPTR,#4500
+REC_LOOP: CLR 98
+LOOP: JNB 98,LOOP
+MOV A,SBUF
+MOVX @DPTR,A
+INC DPTR
+MOV SBUF,#01
+SJMP REC_LOOP
+\end{lstlisting}
+
+
+\section*{Sample Input}
+At the sender side\\
+01 02 03 04 05 06
+
+\section*{Sample Output}
+At the receiver side\\
+01 02 03 04 05 06
+
+\section*{RESULT:}
+The program has been executed and the output verified
+%
+%
+%
+%
