@@ -1,17 +1,61 @@
-\section{Problem Definition}
-adsflkjfdlksjfdasdkhl jkdfs lkjf dslkjf laksdjflaskdjf lkasdj flkasjd f
-\section{Algorithm}
-dfskljfklasdjfkla\\
-fdasfasdafdsdfsfdas\\
-fsdafadsdfsafdas\\
-asdfdfasdfsdfsafds\\
-fdasfdsafdsafadsfdsafds\\
-dfsafafdsfds\\
-\section{Program}
-fdsajkdsfkjdsflk\\
-dfsfdsadfsadfsdfsa\\
-dfslkjdfsalkjdfsjkl\\
-wrerqewrweerwqerwqrewq\\
-dfskjsdfkljdfskjl\\
-\section{Result}
-Program executed successfully and the output is verified.
+\chapter{ Decimal to Hexadecimal Conversion}
+%
+%
+%
+%
+\section*{AIM:}
+To convert decimal number to hexadecimal number.
+
+\section*{ALGORITHM:}
+\textbf{\underline{STEP 1}:}Start
+
+\textbf{\underline{STEP 2}:} A <-Decimal number
+
+\textbf{\underline{STEP 3}:} Take a copy of A to B
+
+\textbf{\underline{STEP 4}:} AND A with 0F then store it in location
+
+\textbf{\underline{STEP 5}:} AND A with F0 and store it in another location
+
+\textbf{\underline{STEP 6}:} Swap separated upper and lower nibbles of A
+
+\textbf{\underline{STEP 7}:} B <- 0A
+
+\textbf{\underline{STEP 8}:} Multiply A with B
+
+\textbf{\underline{STEP 9}:} Add A with lower nibbles
+
+\textbf{\underline{STEP 10:}} Store A
+
+\textbf{\underline{STEP 11}:} Stop
+
+
+\section*{PROGRAM:}
+
+\begin{lstlisting}
+MOV DPTR,#4200H 
+ MOVX A,@DPTR  
+ MOV B,#0A 
+ MUL AB 
+ MOV B,A 
+ INC DPTR 
+ MOVX A,@DPTR 
+ ADD A,B 
+ MOV DPTR,#4300H 
+ MOVX @DPTR,A 
+ HLT: SJMP HLT
+\end{lstlisting}
+
+\section*{Sample Input}
+(4200): 23 
+
+\section*{Sample Output}
+(4300): 07 
+(4301): 01 
+
+\section*{RESULT:}
+The program has been executed and the output verified
+%
+%
+%
+%

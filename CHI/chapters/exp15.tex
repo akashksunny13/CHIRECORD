@@ -1,17 +1,80 @@
-\section{Problem Definition}
-adsflkjfdlksjfdasdkhl jkdfs lkjf dslkjf laksdjflaskdjf lkasdj flkasjd f
-\section{Algorithm}
-dfskljfklasdjfkla\\
-fdasfasdafdsdfsfdas\\
-fsdafadsdfsafdas\\
-asdfdfasdfsdfsafds\\
-fdasfdsafdsafadsfdsafds\\
-dfsafafdsfds\\
-\section{Program}
-fdsajkdsfkjdsflk\\
-dfsfdsadfsadfsdfsa\\
-dfslkjdfsalkjdfsjkl\\
-wrerqewrweerwqerwqrewq\\
-dfskjsdfkljdfskjl\\
-\section{Result}
-Program executed successfully and the output is verified.
+\chapter{ Soring in ascending order}
+%
+%
+%
+%
+\section*{AIM:}
+To sort an array of numbers in ascending order.
+
+\section*{ALGORITHM:}
+\textbf{\underline{STEP 1}:}Start
+
+\textbf{\underline{STEP 2}:} Store the count in R0
+
+\textbf{\underline{STEP 3}:} Decrement R0 if R0!=0, goto step 5
+
+\textbf{\underline{STEP 4}:} Stop
+
+\textbf{\underline{STEP 5}:} R1 <- R0 
+
+\textbf{\underline{STEP 6}:} A <- next element in array, 40H <- next element in array
+
+\textbf{\underline{STEP 7}:} Compare A and 40H
+
+\textbf{\underline{STEP 8:}} If A > 40H, swap the contents
+
+\textbf{\underline{STEP 9}:} Decrement R1. If R1!=0 goto step 5, otherwise goto step 2
+
+
+\section*{PROGRAM:}
+
+\begin{lstlisting}
+MOV DPTR,#5000H
+MOVX A,@DPTR
+MOV R0,A 
+LABEL6 : DJNZ R0,LABEL1
+LABEL2 : SJMP LABEL2
+LABEL1 : MOV A,R0
+MOV R1,A
+MOV DPTR,#5001
+MOVX A,@DPTR
+MOV R2,A
+INC DPTR
+LABEL5 : MOVX A,DPTR
+MOV 40H,A
+MOV A,R2
+CJNE A,40H,LABEL3
+LABEL4 : DJNZ R1,LABEL5
+SJMP LABEL6
+LABEL3 : JC LABEL4
+MOVX @DPTR,A
+MOV A,DPL
+DEC A
+MOV DPL,A
+MOV A,40H
+MOVX @DPTR,A
+INC DPTR
+HALT : SJMP HALT 
+\end{lstlisting}
+
+\section*{Sample Input}
+(5000): 05
+(5001): 02
+(5002): 04
+(5003): 0F
+(5004): 03
+(5005): 07
+
+\section*{Sample Output}
+(5001): 02 
+(5002): 03 
+(5003): 04
+(5004): 07
+(5005): 0F
+
+\section*{RESULT:}
+The program has been executed and the output verified
+%
+%
+%
+%

@@ -1,17 +1,52 @@
-\section{Problem Definition}
-adsflkjfdlksjfdasdkhl jkdfs lkjf dslkjf laksdjflaskdjf lkasdj flkasjd f
-\section{Algorithm}
-dfskljfklasdjfkla\\
-fdasfasdafdsdfsfdas\\
-fsdafadsdfsafdas\\
-asdfdfasdfsdfsafds\\
-fdasfdsafdsafadsfdsafds\\
-dfsafafdsfds\\
-\section{Program}
-fdsajkdsfkjdsflk\\
-dfsfdsadfsadfsdfsa\\
-dfslkjdfsalkjdfsjkl\\
-wrerqewrweerwqerwqrewq\\
-dfskjsdfkljdfskjl\\
-\section{Result}
-Program executed successfully and the output is verified.
+
+\chapter{Parallel Port Data Input}
+%
+%
+\section*{AIM:}
+To input an 8-bit data word from an external source using the parallel port
+\section*{THEORY:}
+An external data source can be simulated by a DC power supply. A voltage value of +5 volt corresponds to a logic state of 1, and the ground of the power supply corresponds to a logic state of 0. Any combination of 8
+bits can be input to the data pins of the parallel port by varying the voltage levels at the pins accordingly. The parallel port should be configured to read external data by modifying bit number 6 in the control port.
+\section*{PROCEDURE:}
+Setup a circuit connecting the parallel port to a power supply. Compile and run the program (given next) in a Linux Environment with superuser privilege. The external input bit string will be read and displayed to the user until \emph{Ctrl+C} is pressed.
+\section*{PROGRAM:}
+\begin{lstlisting}
+#include <stdio.h>
+#include <sys/io.h>
+#include <unistd.h>
+#include <inttypes.h>
+#include <signal.h>
+
+int running = 1;
+
+void signalhandler(int sig){ running = 0; }
+
+void main(){
+
+ //--Instructs the program to execute signalhandler when Ctrl+c is pressed
+ //--SIGINT is a constant in inttypes.h defined as corresponding to Ctrl+c
+ 
+      signal(SIGINT , signalhandler);
+      
+      int addr = 0x378;
+      
+      if( ioperm(addr, 4, 1) == -1){
+           printf("Unable to grant permission.Terminating...\n");
+           return;
+      }else{}
+      
+      //--configuring to read input
+      outb(0x2b, addr+2);
+      
+      while(running){
+           printf("\nRead : %x from external source", inb(addr));
+           sleep(1);
+      }
+      
+      ioperm(addr, 4, 0);
+      return;
+}
+\end{lstlisting}
+
+\section*{RESULT:}
+The program has been executed and the output, verified.

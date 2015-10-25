@@ -1,17 +1,70 @@
-\section{Problem Definition}
-adsflkjfdlksjfdasdkhl jkdfs lkjf dslkjf laksdjflaskdjf lkasdj flkasjd f
-\section{Algorithm}
-dfskljfklasdjfkla\\
-fdasfasdafdsdfsfdas\\
-fsdafadsdfsafdas\\
-asdfdfasdfsdfsafds\\
-fdasfdsafdsafadsfdsafds\\
-dfsafafdsfds\\
-\section{Program}
-fdsajkdsfkjdsflk\\
-dfsfdsadfsadfsdfsa\\
-dfslkjdfsalkjdfsjkl\\
-wrerqewrweerwqerwqrewq\\
-dfskjsdfkljdfskjl\\
-\section{Result}
-Program executed successfully and the output is verified.
+\chapter{Hexadecimal to Decimal Conversion}
+%
+%
+%
+%
+\section*{AIM:}
+To convert hexadecimal number to decimal number.
+
+\section*{ALGORITHM:}
+\textbf{\underline{STEP 1}:}Start
+
+\textbf{\underline{STEP 2}:} A<-Hexadecimal number
+
+\textbf{\underline{STEP 3}:} B<-10
+
+\textbf{\underline{STEP 4}:} Divide A by B
+
+\textbf{\underline{STEP 5}:} Store reminder in a register
+
+\textbf{\underline{STEP 6}:} B<-10
+
+\textbf{\underline{STEP 7}:} Divide A by B
+
+\textbf{\underline{STEP 8}:} Move the quotient in A to any other register
+
+\textbf{\underline{STEP 9}:} A<-B
+
+\textbf{\underline{STEP 10}:} Swap(upper-nibble(A),lower-nibble(A))
+
+\textbf{\underline{STEP 11}:}  Perform OR operation between A and remainder stored
+
+\textbf{\underline{STEP 12:}} Store A
+
+\textbf{\underline{STEP 13}:} Stop
+
+
+\section*{PROGRAM:}
+
+\begin{lstlisting}
+ MOV DPTR,#4200H 
+ MOVX A,@DPTR 
+ MOV B,#64 
+ DIV AB 
+ MOV DPTR,#4300 
+ MOVX @DPTR,A 
+ MOV A,B 
+ MOV B,#0A 
+ DIV AB 
+ INC DPTR 
+ MOVX @DPTR,A  
+ INC DPTR 
+ MOV A,B 
+ MOVX @DPTR,A 
+ HLT: SJMP HLT
+\end{lstlisting}
+
+\section*{Sample Input}
+(4200): FF 
+
+\section*{Sample Output}
+(4300): 01 
+(4301): 02 
+(4302): 07 
+
+\section*{RESULT:}
+The program has been executed and the output verified
+%
+%
+%
+%
