@@ -1,17 +1,51 @@
-\section{Problem Definition}
-adsflkjfdlksjfdasdkhl jkdfs lkjf dslkjf laksdjflaskdjf lkasdj flkasjd f
-\section{Algorithm}
-dfskljfklasdjfkla\\
-fdasfasdafdsdfsfdas\\
-fsdafadsdfsafdas\\
-asdfdfasdfsdfsafds\\
-fdasfdsafdsafadsfdsafds\\
-dfsafafdsfds\\
-\section{Program}
-fdsajkdsfkjdsflk\\
-dfsfdsadfsadfsdfsa\\
-dfslkjdfsalkjdfsjkl\\
-wrerqewrweerwqerwqrewq\\
-dfskjsdfkljdfskjl\\
-\section{Result}
-Program executed successfully and the output is verified.
+\chapter{ Testing of gates}
+%
+%
+%
+%
+\section*{AIM:}
+To study the user of parallel ports in the testing of digital IC's
+
+\section*{PROCEDURE:}
+\textbf{\underline{STEP 1}:}Start
+
+\textbf{\underline{STEP 2}:} Connect the parallel port IC 7408 as per the circuit diagram.
+
+\textbf{\underline{STEP 3}:}  Compile and run the program using the super user privilege in the Linux environment.
+
+\textbf{\underline{STEP 4}:}  Power supply for the logic gates should be came from the parallel ports. For this purpose keep one of the dateline in the parallel ports always in 1 logic state.
+As these equates to a constant voltage source of +5 volts and connect same to the Vcc pin of the IC. Ground of the IC should be connected to common ground of the parallel ports
+
+\textbf{\underline{STEP 5}:} Stop.
+
+For the following program to run the Pin D4 is always kept in the high state and individual truth table values are input to the gate by varying the logic state of the pins D0 & D1. By observing the output of gates for each input associated by whether the LED light up or not. The truth table of the gates can be verified.
+
+
+\section*{PROGRAM:}
+
+\begin{lstlisting}
+#include<studio.h>
+#include<unistd.h>
+void main(){
+int addr=0x378;
+ioperm(addr,3,1);
+outb(0x10,addr);
+sleep(1);
+outb(0x11,addr);
+sleep(1);
+outb(0x12,addr);
+sleep(1);
+outb(0x13,addr);
+sleep(1);
+}
+
+\end{lstlisting}
+
+
+
+\section*{RESULT:}
+The program has been executed and the output verified
+%
+%
+%
+%
