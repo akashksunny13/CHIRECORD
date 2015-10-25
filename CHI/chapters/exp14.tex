@@ -1,17 +1,65 @@
-\section{Problem Definition}
-adsflkjfdlksjfdasdkhl jkdfs lkjf dslkjf laksdjflaskdjf lkasdj flkasjd f
-\section{Algorithm}
-dfskljfklasdjfkla\\
-fdasfasdafdsdfsfdas\\
-fsdafadsdfsafdas\\
-asdfdfasdfsdfsafds\\
-fdasfdsafdsafadsfdsafds\\
-dfsafafdsfds\\
-\section{Program}
-fdsajkdsfkjdsflk\\
-dfsfdsadfsadfsdfsa\\
-dfslkjdfsalkjdfsjkl\\
-wrerqewrweerwqerwqrewq\\
-dfskjsdfkljdfskjl\\
-\section{Result}
-Program executed successfully and the output is verified.
+\chapter{ Largest number in an array}
+%
+%
+%
+%
+\section*{AIM:}
+To find the largest number in an array of 10 numbers.
+
+\section*{ALGORITHM:}
+\textbf{\underline{STEP 1}:}Start
+
+\textbf{\underline{STEP 2}:} Get first element to R1 register
+
+\textbf{\underline{STEP 3}:}  Get the next element in A register
+
+\textbf{\underline{STEP 4}:} Subtract the R1 register from the A register.
+
+\textbf{\underline{STEP 5}:}  Check the carry flag.
+
+\textbf{\underline{STEP 6}:} If carry is not there, then A register is greater that means 2nd data is larger than
+1stData. So exchange the A and B register.
+
+\textbf{\underline{STEP 7}:}  If carry is there, then B register is greater that means 1st data is larger than 2
+nd Data. So do not exchange the A and B register.
+
+\textbf{\underline{STEP 8}:}  Check the R0 register. If R0 is not equal to zero, repeat from the 2
+nd step else Move the R1 register to a memory location.
+
+\textbf{\underline{STEP 11}:} Stop
+
+
+\section*{PROGRAM:}
+
+\begin{lstlisting}
+MOV R0,#10
+MOV DPTR,#4200H
+MOVX A,@DPTR
+MOV R1,A
+INC DPTR
+DEC R0
+LOOP1 :MOVX A,@DPTR
+MOV R2,A
+SUBB A,R1
+JC NO
+MOV R1,R2
+NO :INC DPTR
+DJNZ R0,LOOP1
+MOV DPTR,#4300H
+MOV A,R1
+MOVX @DPTR,A
+HLT :SJMP HLT
+\end{lstlisting}
+
+\section*{Sample Input}
+(4200): 07 05 09 03 01 02 0A 04 06
+
+\section*{Sample Output}
+(4300): 0A
+
+\section*{RESULT:}
+The program has been executed and the output verified
+%
+%
+%
+%
