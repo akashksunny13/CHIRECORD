@@ -1,0 +1,18 @@
+\contentsline {chapter}{\numberline {1}Introduction}{3}
+\contentsline {chapter}{\numberline {2} Computer Assembly}{14}
+\contentsline {chapter}{\numberline {3} Data communication through the serial port}{16}
+\contentsline {chapter}{\numberline {4} COM Port base address}{20}
+\contentsline {chapter}{\numberline {5} Parallel Port Inter-Computer Communication}{23}
+\contentsline {chapter}{\numberline {6} LED Ring Counter}{26}
+\contentsline {chapter}{\numberline {7} Testing of gates}{32}
+\contentsline {chapter}{\numberline {8} Parallel Port Data Input}{34}
+\contentsline {chapter}{\numberline {9} Decimal to Hexadecimal Conversion}{37}
+\contentsline {chapter}{\numberline {10} Multibyte Addition}{39}
+\contentsline {chapter}{\numberline {11} BCD to ASCII Conversion}{42}
+\contentsline {chapter}{\numberline {12} Search From an Array}{44}
+\contentsline {chapter}{\numberline {13} Hexadecimal to Decimal Conversion}{46}
+\contentsline {chapter}{\numberline {14} Factorial}{48}
+\contentsline {chapter}{\numberline {15} Fibonacci}{50}
+\contentsline {chapter}{\numberline {16} Largest number in an array}{53}
+\contentsline {chapter}{\numberline {17} Soring in ascending order}{56}
+\contentsline {chapter}{\numberline {18} Soring in descending order}{59}

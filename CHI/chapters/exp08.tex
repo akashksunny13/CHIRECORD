@@ -1,6 +1,6 @@
-	\section{Problem Definition}
+	\section*{Problem Definition}
 	To perform multi byte addition of two numbers (16 bit)\\
-	\section{Algorithm}
+	\section*{Algorithm}
 	1 start\\
 	2 move the content of memory locations 4501,4503,to R0 and A\\
 	3 ADD R0, A and store result into 4602 \\
@@ -9,7 +9,7 @@
 	6 if there is a carry then place 01 to 4600\\
 	7 else place 00 to 4600\\
 	8 end\\
-	\section{Program}
+	\section*{Program}
 	CLR C\\
 	MOV DPTR,\#4501\\
 	MOVX A,@DPTR\\
@@ -33,12 +33,12 @@
 	MOV A,\#01\\
 	NO :MOVX @DPTR,A\\
 	HLT :SJMP HLT\\
-	\section{Sample Input}
+	\section*{Sample Input}
 	(4500): 12 34\\
 	(4502): 56 78\\
-	\section{Sample Output}
+	\section*{Sample Output}
 	(4600): 00\\
 	(4601): 68\\
 	(4602): AC\\
-	\section{Result}
+	\section*{Result}
 	Program executed successfully and the output is verified.\\

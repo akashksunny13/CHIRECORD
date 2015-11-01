@@ -1,7 +1,7 @@
 
-\section{Problem Definition}
+\section*{Problem Definition}
 To generate a Fibonacci series with the limit read as the input\\
-\section{Algorithm}
+\section*{Algorithm}
 1.Start\\
 2.Point DPTR to memory location 4500\\
 3.Move the count to register \\
@@ -21,7 +21,7 @@ To generate a Fibonacci series with the limit read as the input\\
 17.Decrement R0\\
 18.If R0 is not zero,loop\\
 19.Stop\\
-\section{Program}
+\section*{Program}
 MOV DPTR,\#4200H\\
 MOVX A,@DPTR\\
 MOV R7,A\\
@@ -39,9 +39,9 @@ MOV R1,A\\
 MOV A,R3\\
 DJNZ R7,LOOP1\\
 HLT :SJMP HLT\\
-\section{Sample Inputs}
+\section*{Sample Inputs}
 (4200): 07\\
-\section{Sample Outputs}
+\section*{Sample Outputs}
 (4300): 00 01 01 02 03 05 08\\
-\section{Result}
+\section*{Result}
 Program executed successfully and the output is verified.

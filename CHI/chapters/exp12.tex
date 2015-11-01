@@ -1,7 +1,7 @@
 
-\section{Problem Definition}
+\section*{Problem Definition}
 To find the factorial of an input number.
-\section{Algorithm}
+\section*{Algorithm}
 1 start\\
 2 move the number to register R0\\
 3 move 1 to register A\\
@@ -9,7 +9,7 @@ To find the factorial of an input number.
 5 decrement R0\\
 6 if R0 greater than 0 goto 3\\
 7 end\\
-\section{Program}
+\section*{Program}
 MOV DPTR,\#4200H\\
 MOVX A,@DPTR\\
 MOV B,A\\
@@ -22,10 +22,10 @@ DJNZ B,LOOP1\\
 MOV DPTR,\#4300H\\
 MOVX @DPTR,A\\
 HLT :SJMP HLT\\
-\section{Sample Input}
+\section*{Sample Input}
 (4200): 05\\
-\section{Sample Output}
+\section*{Sample Output}
 (4300): 78\\
-\section{Result}
+\section*{Result}
 Program executed successfully and the output is verified.
 

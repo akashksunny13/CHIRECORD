@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.15)  25 OCT 2015 22:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.22)  1 NOV 2015 22:34
 entering extended mode
 **main.tex
 (main.tex
@@ -495,7 +495,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 46.
  [1
 
-{C:/Users/JISHNU/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/rENJU/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 <images/Cet_emblem.jpg, id=6, 200.75pt x 223.83624pt>
 File: images/Cet_emblem.jpg Graphic file (type jpg)
 
@@ -539,57 +539,157 @@ Overfull \hbox (56.69617pt too wide) in paragraph at lines 65--74
 [1 <./images/Cet_emblem.jpg>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 77.
- (main.toc)
-\tf@toc=\write3
+ (main.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
  [1
 
-]
-Chapter 1.
-(chapters/introduction.tex [2
+])
+\tf@toc=\write3
 
-]
-Chapter 2.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
+Chapter 1.
+(chapters/introduction.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-[3
-
-]
-Chapter 3.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 9.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 11.
-[4
+[3
 
-]
-LaTeX Font Info:    Font shape `T1/ptm/bx/sl' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/sl' tried instead on input line 57.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 26.98592pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5] [6] [7] [8]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 148.
- [9] [10]
+] [4] [5] [6] [7] [8] [9] [10]
 Overfull \hbox (14.63544pt too wide) in paragraph at lines 201--205
-  \T1/ptm/b/n/12 MOUSE[] \T1/ptm/m/n/12 A mouse is a point-ing de-vice that fun
-c-tions by de-tect-ing two-dimensional
+  \T1/ptm/b/n/12 MOUSE \T1/ptm/m/n/12 A mouse is a point-ing de-vice that func-
+tions by de-tect-ing two-dimensional
  []
 
-[11] [12]) [13] [14]
-Chapter 4.
-(chapters/exp01.tex [15
+[11] [12]) [13]
+Chapter 2.
+(chapters/exp02.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
-]
-Chapter 5.
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--83
+
+ []
+
+[14
+
+] [15]
+Chapter 3.
+(chapters/exp01.tex
 Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
@@ -607,68 +707,292 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
  []
 
 [17] [18]) [19]
-Chapter 6.
-(chapters/exp02.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--16
-
- []
-
-) [20
-
-] [21]
-Chapter 7.
-(chapters/exp03.tex [22
+Chapter 4.
+(chapters/exp03.tex [20
 
 ]
-Chapter 8.
-[23
-
-]
-Overfull \hbox (249.3656pt too wide) in paragraph at lines 63--64
+Overfull \hbox (249.3656pt too wide) in paragraph at lines 61--62
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (119.76447pt too wide) in paragraph at lines 64--65
+Overfull \hbox (119.76447pt too wide) in paragraph at lines 62--63
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (206.16522pt too wide) in paragraph at lines 65--67
+Overfull \hbox (206.16522pt too wide) in paragraph at lines 63--65
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 69.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 67.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
- [24]
-Overfull \hbox (111.12439pt too wide) in paragraph at lines 78--79
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 67.
+ [21]
+Overfull \hbox (111.12439pt too wide) in paragraph at lines 76--77
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [25]
+) [22]
+Chapter 5.
+(chapters/exp04.tex [23
+
+] [24]) [25]
+Chapter 6.
+(chapters/exp05.tex <images/pp.png, id=92, 351.3125pt x 316.18124pt>
+File: images/pp.png Graphic file (type png)
+
+<use images/pp.png>
+Package pdftex.def Info: images/pp.png used on input line 12.
+(pdftex.def)             Requested size: 175.6558pt x 158.09023pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (7.34904pt too wide) in paragraph at lines 16--17
+[]\T1/ptm/m/n/14.4 The par-al-lel port has three com-monly used port ad-dresses
+ as shown
+ []
+
+[26
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+
+Overfull \hbox (9.39273pt too wide) in paragraph at lines 38--40
+[]\T1/ptm/m/n/14.4 The par-al-lel port is as-so-ci-ated with three soft-ware re
+g-is-ters namely-
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[27 <./images/pp.png>] [28]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 85.
+
+[29] [30]
+Overfull \hbox (171.60492pt too wide) in paragraph at lines 130--131
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (171.60492pt too wide) in paragraph at lines 135--137
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [31]
+Chapter 7.
+(chapters/exp17.tex [32
+
+]) [33]
+Chapter 8.
+(chapters/exp07.tex [34
+
+]
+Overfull \hbox (249.3656pt too wide) in paragraph at lines 25--26
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (249.3656pt too wide) in paragraph at lines 26--28
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (171.60492pt too wide) in paragraph at lines 33--34
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (171.60492pt too wide) in paragraph at lines 41--42
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[35]) [36]
 Chapter 9.
-(chapters/exp04.tex [26
+(chapters/exp06.tex [37
 
-]
+]) [38]
 Chapter 10.
-[27
+(chapters/exp08.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
-] [28]) [29]
-Chapter 11.
-(chapters/exp05.tex [30
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--36
+
+ []
+
+[39
 
 ]
-Chapter 12.
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
-!pdfTeX error: pdflatex.exe (file ./images/parallel-port-pinout.jpg): reading i
-mage file failed
- ==> Fatal error occurred, no output PDF file produced!
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--43
+
+ []
+
+[40])
+Underfull \hbox (badness 10000) in paragraph at lines 44--109
+
+ []
+
+[41]
+Chapter 11.
+(chapters/exp09.tex [42
+
+]) [43]
+Chapter 12.
+(chapters/exp10.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--26
+
+ []
+
+[44
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 32--115
+
+ []
+
+[45]
+Chapter 13.
+(chapters/exp11.tex
+Overfull \hbox (3.93492pt too wide) in paragraph at lines 30--31
+[]$[]$\T1/ptm/b/n/14.4 : \T1/ptm/m/n/14.4 Per-form OR op-er-a-tion be-tween A a
+nd re-main-der stored 
+ []
+
+[46
+
+]) [47]
+Chapter 14.
+(chapters/exp12.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--25
+
+ []
+
+[48
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+) [49]
+Chapter 15.
+(chapters/exp13.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--24
+
+ []
+
+[50
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 25--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+[51]
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+
+ []
+
+) [52]
+Chapter 16.
+(chapters/exp14.tex [53
+
+] [54
+
+]) [55]
+Chapter 17.
+(chapters/exp15.tex [56
+
+]) [57] [58]
+Chapter 18.
+(chapters/exp16.tex [59
+
+] [60]) [61] (main.aux) ) 
+Here is how much of TeX's memory you used:
+ 4264 strings out of 493673
+ 53715 string characters out of 3141529
+ 123399 words of memory out of 3000000
+ 7480 multiletter control sequences out of 15000+200000
+ 75161 words of font info for 84 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 32i,11n,43p,551b,1663s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fon
+tname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (63 pages, 176824 bytes).
+PDF statistics:
+ 230 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+
