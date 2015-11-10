@@ -1,23 +1,21 @@
 
-%
-%
-%
-%
 \section*{AIM:}
 To transfer \\
  1) Single data between 8051 microcontroller ICs.\\
  2) an array of numbers  between 8051 microcontroller ICs.
 
 \section*{ALGORITHM:}
-\textbf{Single data transfer}\\
-\large{Sender:}\\
 
-\textbf{\underline{STEP 1}:}SBUF <- Element to be transfered
-
-\large{Receiver:}\\
-\textbf{\underline{STEP 1}:} Clear R1 bit 
-
-\textbf{\underline{STEP 2}:} When R1 is set, move SBUF into an external memory location
+\subsection*{Single data transfer}
+\subsubsection{Sender:}
+\begin{enumerate}
+	\item[STEP] 1: SBUF <- Element to be transfered
+\end{enumerate}
+\subsubsection{Receiver:}
+\begin{itemize}
+\item[STEP] 1: Clear R1 bit 
+\item[STEP] 2: When R1 is set, move SBUF into an external memory location
+\end{itemize}
 
 
 
